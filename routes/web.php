@@ -38,4 +38,17 @@ $router->get('redirect','firstController@redirect');
 
 // Sending and Caching
 $router->post('catch','firstController@catch');
+$router->post('catchbody','firstController@catchbody');
 
+
+// Write SQL Query to Caching data from database
+$router->get('allData','EmployeeController@allData');
+$router->post('/insertData','EmployeeController@insertData');
+$router->put('/updateData','EmployeeController@updateData');
+$router->delete('/deleteData','EmployeeController@deleteData');
+
+// Use Laravel Docs to Caching data from database
+$router->get('allData2','EmployeeController2@allData');
+$router->post('/dataInsert','EmployeeController2@dataInsert');
+$router->put('/dataUpdate','EmployeeController2@dataUpdate');
+$router->delete('/dataDelete','EmployeeController2@dataDelete');

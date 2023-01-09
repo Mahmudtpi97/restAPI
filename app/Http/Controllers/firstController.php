@@ -29,6 +29,7 @@ class firstController extends Controller
                 array("Saab",5,2),
                 array("Land Rover",17,15)
             );
+
         return response()
               ->json($cars);
     }
@@ -44,8 +45,14 @@ class firstController extends Controller
 
 
 //   Caching Data
+// Header Data Specific data Caching
 public function catch(Request $request){
     return $request->header('name');
 }
+// Body Data Cache
+public function catchbody(Request $request){
+    return $request;
+}
+
 
 }

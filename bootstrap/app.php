@@ -23,7 +23,7 @@ $app = new Laravel\Lumen\Application(
     dirname(__DIR__)
 );
 
-// $app->withFacades();
+$app->withFacades();
 
 // $app->withEloquent();
 
@@ -95,6 +95,8 @@ $app->configure('app');
 // $app->register(App\Providers\AuthServiceProvider::class);
 // $app->register(App\Providers\EventServiceProvider::class);
 
+$app->register(Flipbox\LumenGenerator\LumenGeneratorServiceProvider::class);
+
 /*
 |--------------------------------------------------------------------------
 | Load The Application Routes
@@ -112,8 +114,7 @@ $app->router->group([
     require __DIR__.'/../routes/web.php';
 });
 
-// Provider
- $app->register(Flipbox\LumenGenerator\LumenGeneratorServiceProvider::class);
+
 
 
 return $app;
