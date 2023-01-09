@@ -52,3 +52,21 @@ $router->get('allData2','EmployeeController2@allData');
 $router->post('/dataInsert','EmployeeController2@dataInsert');
 $router->put('/dataUpdate','EmployeeController2@dataUpdate');
 $router->delete('/dataDelete','EmployeeController2@dataDelete');
+
+// Use Laravel Model to Caching data from database
+$router->get('allData3','EmployeeController3@allData');
+$router->post('/dataInsert3','EmployeeController3@dataInsert');
+$router->put('/dataUpdate4','EmployeeController3@dataUpdate');
+$router->delete('/dataDelete5','EmployeeController3@dataDelete');
+
+
+// Aggregates Using Model
+$router->get('count','EmployeeController3@count');
+$router->get('sum','EmployeeController3@sum');
+$router->get('max','EmployeeController3@max');
+$router->get('min','EmployeeController3@min');
+$router->get('avg','EmployeeController3@avg');
+
+
+// Lumen Host Server
+// php -S localhost:8000 -t public
