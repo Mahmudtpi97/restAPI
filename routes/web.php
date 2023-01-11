@@ -67,6 +67,8 @@ $router->get('max','EmployeeController3@max');
 $router->get('min','EmployeeController3@min');
 $router->get('avg','EmployeeController3@avg');
 
+// Authentication Check Route
+$router->get('AuthAllData',['middleware'=>'auth','uses'=>'EmployeeController3@allData']);
 
 // Lumen Host Server
 // php -S localhost:8000 -t public
